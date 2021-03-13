@@ -1,0 +1,15 @@
+<h1> Create a New Workout Routine Here </h1>
+<h3> A routine is defined by the goal of that specific workout routine. For example it could be...</h3>
+<ul>
+  <li>Chest day</li>
+  <li>Cardio day</li>
+  <li>Legs and Back day</li>
+</ul>
+<h3> It can be whatever you want! </h3>
+
+<%= form_for(@routine) do |f| %>
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+
+    <%= f.submit "Create new Routine" %>
+<% end %>
