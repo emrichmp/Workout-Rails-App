@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_011039) do
+ActiveRecord::Schema.define(version: 2021_03_23_022215) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.integer "user_id"
+    t.integer "routine_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["routine_id"], name: "index_comments_on_routine_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "routines", force: :cascade do |t|
     t.string "day"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_routines_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -25,4 +37,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_011039) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "routines"
+  add_foreign_key "comments", "users"
+  add_foreign_key "routines", "users"
 end
