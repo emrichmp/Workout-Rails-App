@@ -13,6 +13,12 @@ class RoutinesController < ApplicationController
         end
     end
 
+    def index
+        if params[:user_id] && user = User.find_by_id(params[:user_id])
+            @routines = user.routines
+        end
+    end
+
     private
     #strong params
     def user_params
