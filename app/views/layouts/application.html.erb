@@ -14,7 +14,7 @@
     <% if logged_in? %>
       <%= link_to 'Logout', logout_path, method: :delete %> | 
       <%= link_to 'New Routine', new_routine_path %> | 
-      <%= link_to 'See All Routines', "/users/#{@current_user}" %> | 
+      <%= link_to 'See All Routines', routines_path %> | 
     <% else %>
       <%= link_to "Sign up", signup_path %> | 
       <%= link_to "Log In", login_path %>

@@ -5,7 +5,7 @@ class RoutinesController < ApplicationController
     end
 
     def create
-        @routine = Routine.new(user_params)
+        @routine = current_user.routines.build(routine_params)
         if @routine.save
             redirect_to routines_path
         else
@@ -21,7 +21,7 @@ class RoutinesController < ApplicationController
 
     private
     #strong params
-    def user_params
+    def routine_params
         params.require(:routine).permit(:day)
     end
 end
