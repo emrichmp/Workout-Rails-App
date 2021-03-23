@@ -15,6 +15,11 @@ class UsersController < ApplicationController
         end
     end
 
+    def show
+        @user = User.find_by_id(params[:id])
+        redirect_to '/' if !@user
+    end
+
     private
     #strong params
     def user_params
