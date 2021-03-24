@@ -1,5 +1,5 @@
-<h1> show page </h1>
+<h1> These are all the routines made by  <%= @user.username %> </h1>
 
 <% @user.routines.each do |i| %>
-    <li> <%= i.day %> </li>
+    <li> <%= link_to i.day, "/routines/#{i.id}" %> day </li>
 <% end %>
