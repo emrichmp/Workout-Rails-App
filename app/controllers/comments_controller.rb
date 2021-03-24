@@ -2,9 +2,7 @@ class CommentsController < ApplicationController
     before_action :redirect_if_not_logged_in
 
     def new
-        if params[:routine_id] && @routine = Routine.find_by_id(params[:post_id])
-            @comment = @routine.comments.build
-        end
+        @comment = Comment.new
     end
 
     def create
