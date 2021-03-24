@@ -1,1 +1,8 @@
-<h1> hi </h1>
+<h1> Here are all the Users! </h1>
+<h2> Click on a User to view their routines! </h2>
+
+<ul>
+    <% @users.each do |i| %>
+        <li> <%= link_to i.username, "/users/#{i.id}" %></li>
+    <% end %>
+</ul>
