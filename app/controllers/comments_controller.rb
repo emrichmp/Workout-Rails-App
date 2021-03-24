@@ -11,7 +11,12 @@ class CommentsController < ApplicationController
     end
 
     def new
-        @comment = Comment.new
+        if params[:routine_id] && @routine = Routine.find_by_id(params[:routine_id])
+            @comment = @routine.comments.build
+        else
+            @error = "That routine doesn't exist" if params[:routine_id]
+            @comment = Comment.new
+        end
     end
 
     def create
