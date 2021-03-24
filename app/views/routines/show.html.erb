@@ -8,7 +8,7 @@
 
 <h3> Comments: </h3>
 <% @routine.comments.each do |i| %>
-    <li> <%= i.content %> </li>
+    <li> <%= i.user.username %> says <%= i.content %> </li>
 <% end %>
 
 <% end %>
