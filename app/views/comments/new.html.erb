@@ -1,2 +1,14 @@
 <h1> New Comment! </h1>
 
+
+<%= form_for([@comment.routine,@comment]) do |f|%>
+    <% if !@comment.routine %>
+     <%= f.label :routine %>
+     <%= f.collection_select :routine_id, Routine.all, :id, :day %>
+   <% else %>
+       <%= f.hidden_field :routine_id %>
+   <% end %>
+     <%= f.label :content %>
+     <%= f.text_field :content %>
+     <%= f.submit %>
+   <% end %>

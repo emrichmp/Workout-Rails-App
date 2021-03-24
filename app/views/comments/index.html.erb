@@ -1,0 +1,11 @@
+<% if @routine %>
+  <h1>Comments for <%= @routine.day%></h1>
+<% else %>
+  <h1>All Comments</h1>
+<% end %>
+
+<ul>
+<% @comments.each do |c|%>
+  <li><%= c.user.username%> says "<%= c.content%>" about this routine: <strong><%= link_to c.routine.day, routine_path(c.routine_id) %></strong></li>
+<% end %>
+</ul>
