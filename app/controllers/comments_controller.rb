@@ -2,7 +2,12 @@ class CommentsController < ApplicationController
     before_action :redirect_if_not_logged_in
 
     def index
-        @comments = Comment.all
+        if params[:routine_id] && @routine = Routine.find_by_id(params[:routine_id])
+            @comments = @routine.comments
+        else
+            @error = "That routine doesn't exist" if params[:routine_id]
+            @comments = Comment.all
+        end
     end
 
     def new
