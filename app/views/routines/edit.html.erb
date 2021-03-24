@@ -1,0 +1,9 @@
+<h1>Edit <%= @routine.day %>!</h1>
+
+<%= form_for(@routine) do |f|%>
+
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+
+    <%= f.submit %>
+<% end %>

@@ -1,7 +1,17 @@
+<h2> Welcome <%=current_user.username %>! </h2>
+<h4> Use the Nav Bar on top to go to your desired page! Here are somethings you can do...</h4>
+<ul>
+    <li>View Your Routines</li>
+    <li>Create a New Routine</li>
+    <li>Look at Comments on Routines</li>
+    <li>Comment on Other Routines</li>
+    <li>And much more! Take a look around!</li>
+</ul>
+
 <h1>  Here are all of your Routines! </h1>
 
-<!-- write code to display all routines here -->
-<!-- make sure use can click on routine and edit/delete it -->
-
-<!-- <%= render partial: "routines", locals: {routines: @routines} %> -->
-
+<ul>
+    <% current_user.routines.each do |i| %>
+        <li> <%= link_to i.day, "/routines/#{i.id}" %> day </li>
+    <% end %>
+</ul>
