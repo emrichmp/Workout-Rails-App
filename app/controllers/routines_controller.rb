@@ -14,8 +14,8 @@ class RoutinesController < ApplicationController
     end
 
     def index
-        if params[:user_id] && user = User.find_by_id(params[:user_id])
-            @routines = @current_user.routines
+        if params[:user_id] && @user = User.find_by_id(params[:user_id])
+            @routines = @user.posts.alpha
         end
     end
 
