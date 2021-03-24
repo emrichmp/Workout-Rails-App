@@ -8,10 +8,10 @@
     <li>And much more! Take a look around!</li>
 </ul>
 
-<h1>  Here are all of your Routines! </h1>
+<h1>  Here are all Routines! </h1>
 
 <ul>
-    <% current_user.routines.each do |i| %>
+    <% @routines.each do |i| %>
         <li> <%= link_to i.day, "/routines/#{i.id}" %> day </li>
     <% end %>
 </ul>
