@@ -39,9 +39,11 @@ class RoutinesController < ApplicationController
        end
      end
 
+
     private
     #strong params
     def routine_params
         params.require(:routine).permit(:day)
     end
+    
 end

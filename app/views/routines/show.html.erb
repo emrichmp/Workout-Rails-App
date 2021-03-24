@@ -4,5 +4,5 @@
 
 <% if @routine.user == current_user %>
 <h4><%= link_to "Edit Routine Name", edit_routine_path(@routine)%></h4>
-<h4><%= link_to "Delete Routine", method: :destroy %></h4>
+<h4><%= link_to "Delete Routine", edit_routine_path(@routine)%></h4>
 <% end %>
