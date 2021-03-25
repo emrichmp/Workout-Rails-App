@@ -8,17 +8,7 @@
 </ul>
 <h3> It can be whatever you want! </h3>
 
-<% if @routine.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@routine.errors.count, "error") %> prohibited this routine from being saved:</h2>
-
-    <ul>
-      <% @routine.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-  <% end %>
+<%= render partial: "layouts/errors", locals: {object: @routine} %>
 
 <%= form_for(@routine) do |f| %>
     <%= f.label :day %>
