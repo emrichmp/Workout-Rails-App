@@ -33,9 +33,10 @@ Specs:
     - If user gives faulty input on a form, it will pop up with an error
 
 Confirm:
-- [ ] The application is pretty DRY
+- [X] The application is pretty DRY
 - [X] Limited logic in controllers
     - simple if statements, nothing nested
 - [X] Views use helper methods if appropriate
     - helper methods are established in controllers and used in views
-- [ ] Views use partials if appropriate
+- [X] Views use partials if appropriate
+    - used _errors partial in layouts for displaying error messages
