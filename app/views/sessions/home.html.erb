@@ -1,5 +1,12 @@
 <h1> Welcome </h1>
 
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+
+
 <%= link_to "Sign up", signup_path %>
 OR
 <%= link_to "Login", login_path %>

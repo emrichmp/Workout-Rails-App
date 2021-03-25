@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
         else
             #add flash message here
             redirect_to '/'
+            flash.alert = "Incorrect Username or password"
         end
     end
 
