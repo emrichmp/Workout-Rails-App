@@ -10,7 +10,8 @@ Specs:
     - has_many :commented_routines, through: :comments,
     - has_many :users, through: :comments
 - [ ] Include at least one many-to-many relationship (x has_many y through z, y has_many x through z; e.g. Recipe has_many Items through Ingredients, Item has_many Recipes through Ingredients)
-- [ ] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
+- [X] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
+    - Comments had attribute comment.content
 - [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
     - Routine class validates that there is a "day" attribute
     - User class validates that the username is present and unique and the presence of a password attribute
@@ -33,7 +34,8 @@ Specs:
 
 Confirm:
 - [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [X] Limited logic in controllers
+    - simple if statements, nothing nested
 - [X] Views use helper methods if appropriate
     - helper methods are established in controllers and used in views
 - [ ] Views use partials if appropriate
