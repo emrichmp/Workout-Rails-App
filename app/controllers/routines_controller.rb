@@ -15,7 +15,8 @@ class RoutinesController < ApplicationController
     end
 
     def index
-        @routines = Routine.all
+        #use of scope method here
+        @routines = Routine.alpha
     end
 
     def show

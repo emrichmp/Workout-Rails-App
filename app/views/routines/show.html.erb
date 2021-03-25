@@ -6,15 +6,12 @@
 <h4><%= link_to "Edit Routine Name", edit_routine_path(@routine)%></h4>
 <h4><%= link_to "Delete Routine", edit_routine_path(@routine)%></h4>
 
-<h5><%= link_to "See All Comments", routine_comments_path(@routine) %>
-
-<h5><%= link_to "Add a comment on this Routine", new_routine_comment_path(@routine) %>
-
-
 <h3> Here is a comment on this routine: </h3>
 <% @routine.comments.each do |i| %>
     <li> <%= i.user.username %> says <%= i.content %> </li>
 <% end %>
 
-
 <% end %>
+
+<h5><%= link_to "Add a comment on this Routine", new_routine_comment_path(@routine) %>
+<h5><%= link_to "See All Comments", routine_comments_path(@routine) %>

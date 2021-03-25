@@ -21,10 +21,14 @@ Specs:
     - User can login
 - [X] Include logout
     - User can Log out
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [X] Include third party signup/login (how e.g. Devise/OmniAuth)
+    - User can use omniauth to login using google
+- [X] Include nested resource show or index (URL e.g. users/2/recipes)
+    - User can click on a routine and click on see all comments to get to '/routines/:id/comments'
+- [X] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
+    - User can click on a routine and click on add new comment to get to '/routine/:id/comments/new'
+- [X] Include form display of validation errors (form URL e.g. /recipes/new)
+    - If user gives faulty input on a form, it will pop up with an error
 
 Confirm:
 - [ ] The application is pretty DRY
