@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #omniauth callback route
   get "/auth/google_oauth2/callback" => 'sessions#google'
 
+  delete '/routine/:id', to: 'routines#destroy', as: 'routine'
+
   resources :comments
   resources :users do
     resources :routines, only: [:new, :create, :index]

@@ -4,7 +4,9 @@
 
 <% if @routine.user == current_user %>
 <h4><%= link_to "Edit Routine Name", edit_routine_path(@routine)%></h4>
-<h4><%= link_to "Delete Routine", edit_routine_path(@routine)%></h4>
+<%= form_for(@routine, :html => { :method => :delete, :remote => true }) do |f| %>
+<%= f.submit :value => "Delete" %>
+<% end %>
 
 <h3> Here is a comment on this routine: </h3>
 <% @routine.comments.each do |i| %>
