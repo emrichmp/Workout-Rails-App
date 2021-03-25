@@ -10,8 +10,12 @@
 
 <h1>  Here are all Routines! </h1>
 
+<% if @routines.empty? %>
+    <h2> No Routines yet! </h2>
+<% else %>
 <ul>
     <% @routines.each do |i| %>
         <li> <%= link_to i.day, "/routines/#{i.id}" %> day </li>
     <% end %>
 </ul>
+<% end %>
