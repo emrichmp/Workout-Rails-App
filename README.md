@@ -1,24 +1,7 @@
 # README
+Welcome to my Workout-Rails-App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To get this running:
+fork and clone the repo, open it and then run "bundle install" and "rake db:migrate" in console. After that fire up the rails server with "rails s" in console. and then you're ready to go! Create an account or log in!
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
