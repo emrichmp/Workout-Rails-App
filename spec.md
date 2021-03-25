@@ -16,6 +16,7 @@ Specs:
     - Comments had attribute comment.content
 - [X] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
     - Routine class validates that there is a "day" attribute
+    - Routine has a custom validation that limits the amount of routines that can be made in a day by a user
     - User class validates that the username is present and unique and the presence of a password attribute
 - [X] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
     - routine model has a scope method that alphabetizes the routines
