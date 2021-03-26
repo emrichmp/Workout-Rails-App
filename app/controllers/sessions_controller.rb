@@ -18,10 +18,11 @@ class SessionsController < ApplicationController
     end
 
     def google
-        @user = User.find_or_create_by(username: auth["info"]["email"]) do |user|
+        @user = User.find_or_create_by(username: auth["info"]["email"].chomp("@gmail.com")) do |user|
             user.password = SecureRandom.hex(10)
         end
-        if @user.save
+        #byebug
+        if @user
             session[:user_id] = @user.id
             redirect_to "/users/#{@user.id}"
         else

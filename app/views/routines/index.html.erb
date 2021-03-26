@@ -15,7 +15,7 @@
 <% else %>
 <ul>
     <% @routines.each do |i| %>
-        <li> <%= link_to i.day, "/routines/#{i.id}" %> day </li>
+        <li> <%= link_to i.day, "/routines/#{i.id}" %> day - has <%= i.comments.size%> comments </li>
     <% end %>
 </ul>
 <% end %>

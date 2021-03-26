@@ -6,6 +6,6 @@
 
 <ul>
 <% @comments.each do |c|%>
-  <li><%= c.user.username%> says "<%= c.content%>" about this routine: <strong><%= link_to c.routine.day, routine_path(c.routine_id) %></strong></li>
+  <li><%= c.user.username%> says "<%= c.content%>" about this routine: <strong><%= link_to c.routine.day, "/routines/#{c.routine.id}" %></strong></li>
 <% end %>
 </ul>
